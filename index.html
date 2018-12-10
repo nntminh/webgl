@@ -100,9 +100,6 @@
             fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
             fillLight.position.set(100, 0, 100);
 
-            backLight = new THREE.DirectionalLight(0xffffff, 1.0);
-            backLight.position.set(100, 0, -100).normalize();
-
             /* Model */
 
             var mtlLoader = new THREE.MTLLoader();
@@ -166,15 +163,12 @@
                     ambient.intensity = 0.25;
                     scene.add(keyLight);
                     scene.add(fillLight);
-                    scene.add(backLight);
 
                 } else {
 
                     ambient.intensity = 1.0;
                     scene.remove(keyLight);
                     scene.remove(fillLight);
-                    scene.remove(backLight);
-
                 }
 
             }
