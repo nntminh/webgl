@@ -102,16 +102,16 @@
             /* Model */
 
             var mtlLoader = new THREE.MTLLoader();
-            mtlLoader.setBaseUrl('assets/NRS_Cake/');
-            mtlLoader.setPath('assets/NRS_Cake/');
-            mtlLoader.load('NRS_Cake.mtl', function (materials) {
+            mtlLoader.setBaseUrl('assets/Pasta/');
+            mtlLoader.setPath('assets/Pasta/');
+            mtlLoader.load('Pasta.mtl', function (materials) {
 
                 materials.preload();
 
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.setPath('assets/NRS_Cake/');
-                objLoader.load('NRS_Cake.obj', function (object) {
+                objLoader.setPath('assets/Pasta/');
+                objLoader.load('Pasta.obj', function (object) {
 
                     scene.add(object);
 
@@ -189,7 +189,6 @@
             renderer.render(scene, camera);
 
         }
-
     </script>
 
 </body>
